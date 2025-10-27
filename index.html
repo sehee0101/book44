@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>미분방정식 추리게임3</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="img/favicon.ico" rel="icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ✅ Carousel Start (바로 시작하도록 수정) -->
+  <div class="container-fluid p-0 mb-5 pb-5">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="w-100" src="img/서재사진.png" alt="Image">
+          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+            <div class="p-10" style="max-width: 900px;">
+              <h4 class="text-white text-uppercase mb-md-5">IASA 미분방정식 수업</h4>
+              <h1 class="display-3 text-white mb-md-4">우승 트로피편<br>(사라진 우승 트로피를 찾아라)</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Carousel End -->
+
+
+  <!-- About Start -->
+<div class="container-fluid py-5">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <h1 class="section-title position-relative text-center mb-5">상황 설명</h1>
+      </div>
+    </div>
+
+   <!-- ✅ 한 줄(가로) 구성: 사건 설명 / 사진 -->
+<div class="row align-items-stretch text-center text-lg-start">
+
+  <!-- 사건 설명 -->
+  <div class="col-lg-6 col-md-12 py-4 d-flex flex-column justify-content-center">
+    <h4 class="fw-bold mb-3">사건 설명</h4>
+    <p class="text-muted" style="line-height: 1.6;">
+      사건 당일, 산티아고의 안드레스 베요 대학에서 중요한 농구 경기의 결승전이 개최될 예정이었습니다.<br>
+      많은 사람들이 경기를 기대하며 이곳 체육관에 모였습니다.<br>
+      그런데 예상치 못한 사건이 일어나는 바람에 행사가 중단될 위기에 처합니다.<br>
+      누군가가 우승 트로피를 훔쳐가 버린 겁니다.<br>
+      경찰은 급하게 사건 관계자와 의심스러운 용의자들을 한자리에 모으고 당신의 도움을 요청합니다.<br>
+      마침 시합을 관람하러 온 당신은 조속히 사건을 해결하기 위해 나섭니다.<br>
+    </p>
+  </div>
+
+  <!-- 사건 사진 -->
+  <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center py-4">
+    <div class="position-relative w-100 rounded overflow-hidden bg-light" style="max-width: 500px;">
+      <img 
+        src="img/메인사진.png" 
+        alt="사건 현장 사진" 
+        class="img-fluid rounded shadow"
+        style="object-fit: contain; width: 100%; height: auto;"
+      >
+    </div>
+  </div>
+</div>
+
+<!-- ✅ 용의자 목록 (새로운 줄로 분리) -->
+<div class="row text-center mt-5">
+  <h4 class="fw-bold mb-4 w-100">용의자 목록</h4>
+
+  <!-- 용의자 1 -->
+  <div class="col-lg-3 col-md-6 mb-4">
+    <div class="card border-0 shadow-sm h-100">
+      <img src="img/학생A.png" class="card-img-top" alt="용의자1 농구부 학생 A" style="object-fit: cover; height: 250px;">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">용의자1: 학생 A</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- 용의자 2 -->
+  <div class="col-lg-3 col-md-6 mb-4">
+    <div class="card border-0 shadow-sm h-100">
+      <img src="img/학생B.png" class="card-img-top" alt="용의자2 농구부 학생 B" style="object-fit: cover; height: 250px;">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">용의자2: 농구부 학생 B</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- 용의자 3 -->
+  <div class="col-lg-3 col-md-6 mb-4">
+    <div class="card border-0 shadow-sm h-100">
+      <img src="img/학생C.png" class="card-img-top" alt="용의자3 농구부 학생 C" style="object-fit: cover; height: 250px;">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">용의자3: 농구부 학생 C</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- 용의자 4 -->
+  <div class="col-lg-3 col-md-6 mb-4">
+    <div class="card border-0 shadow-sm h-100">
+      <img src="img/학생D.png" class="card-img-top" alt="용의자4 수학과 학생 D" style="object-fit: cover; height: 250px;">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">용의자4: 수학과 학생 D</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ✅ 사건 현장 사진 (용의자 목록 아래) -->
+<div class="container my-5" id="scene-photo">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="card border-0 shadow-sm">
+        <div class="row g-0 align-items-center">
+          <!-- 썸네일 -->
+          <div class="col-md-5">
+            <a href="#" class="d-block" data-bs-toggle="modal" data-bs-target="#scenePhotoModal">
+              <!-- 썸네일 파일이 없으면 아래 src를 'img/사건현장전체.png'로 동일하게 사용해도 됩니다 -->
+              <img src="img/사건현장전체.png" alt="사건 현장 사진 썸네일"
+                   class="img-fluid rounded-start" style="object-fit: cover; height: 100%; max-height: 320px;">
+            </a>
+          </div>
+          <!-- 설명 + 버튼 -->
+          <div class="col-md-7 p-4">
+            <h4 class="fw-bold mb-2">사건 현장 사진</h4>
+            <p class="text-muted mb-3">이미지를 클릭하면 크게 볼 수 있습니다.</p>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#scenePhotoModal">
+              크게 보기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- ✅ 사건 현장 사진 모달 -->
+<div class="modal fade" id="scenePhotoModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">사건 현장 사진</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center" style="max-height: 80vh; overflow-y: auto;">
+        <!-- 원본 큰 이미지 -->
+        <img src="img/사건현장전체.png" class="img-fluid rounded shadow" alt="사건 현장 원본 이미지">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- ✅ 증거 확보 자료 확인란 -->
+<div class="container-fluid py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-8 text-center">
+        <h2 class="section-title position-relative mb-3">증거 확보 자료 확인</h2>
+        <p class="text-muted mb-0">각 증거를 눌러 이미지를 확인하세요.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- 증거 1 -->
+      <div class="col-md-4 mb-4">
+        <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#evidence1">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="img/증거1_총장과의 대화1.png" class="card-img-top" alt="증거1: 총장과의 대회" style="object-fit: cover; height: 220px;">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">증거 1</h5>
+              <p class="card-text text-muted mb-0">총장과의 대화</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- 증거 2 -->
+      <div class="col-md-4 mb-4">
+        <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#evidence2">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="img/증거2_사물함.png" class="card-img-top" alt="증거2: 사물함" style="object-fit: cover; height: 220px;">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">증거 2</h5>
+              <p class="card-text text-muted mb-0">사물함</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- 증거 3 -->
+      <div class="col-md-4 mb-4">
+        <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#evidence3">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="img/증거3_게시판.png" class="card-img-top" alt="증거3: 게시판" style="object-fit: cover; height: 220px;">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">증거 3</h5>
+              <p class="card-text text-muted mb-0">게시판</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- 증거 4 -->
+      <div class="col-md-4 mb-4">
+        <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#evidence4">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="img/증거4_발자국.png" class="card-img-top" alt="증거4: 발자국" style="object-fit: cover; height: 220px;">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">증거 4</h5>
+              <p class="card-text text-muted mb-0">발자국</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- 증거 5 -->
+      <div class="col-md-4 mb-4">
+        <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#evidence5">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="img/증거5_아이패드.png" class="card-img-top" alt="증거5: 아이패드" style="object-fit: cover; height: 220px;">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">증거 5</h5>
+              <p class="card-text text-muted mb-0">아이패드</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- 증거 6 -->
+      <div class="col-md-4 mb-4">
+        <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#evidence6">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="img/증거6_가방.png" class="card-img-top" alt="증거6: 가방" style="object-fit: cover; height: 220px;">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">증거 6</h5>
+              <p class="card-text text-muted mb-0">가방</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ 증거 1 모달 -->
+<div class="modal fade" id="evidence1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">증거 1: 총장과의 대화</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center" style="max-height: 80vh; overflow-y: auto;">
+        <img src="img/증거1_총장과의 대화1.png" class="img-fluid rounded mb-4" alt="증거1 사진 1">
+        <img src="img/증거1_총장과의 대화2.png" class="img-fluid rounded mb-4" alt="증거1 사진 2">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ 증거 2 모달 -->
+<div class="modal fade" id="evidence2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">증거 2: 사물함</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/증거2_사물함.png" class="img-fluid rounded" alt="증거2: 사물함">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ 증거 3 모달 -->
+<div class="modal fade" id="evidence3" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">증거 3: 게시판</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/증거3_게시판.png" class="img-fluid rounded" alt="증거3: 게시판">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ 증거 4 모달 -->
+<div class="modal fade" id="evidence4" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">증거 4: 발자국</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/증거4_발자국.png" class="img-fluid rounded" alt="증거4: 발자국">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ 증거 5 모달 -->
+<div class="modal fade" id="evidence5" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">증거 5: 아이패드</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/증거5_아이패드.png" class="img-fluid rounded" alt="증거5: 아이패드">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ 증거 6 모달 -->
+<div class="modal fade" id="evidence6" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">증거 6: 가방</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/증거6_가방.png" class="img-fluid rounded" alt="증거6: 가방">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아이패드 확인해보기</title>
+
+  <!-- ✅ Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <!-- ✅ 아이패드 확인해보기 -->
+  <div class="container-fluid py-5 bg-white">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+          <h2 class="section-title position-relative mb-3">아이패드 확인하기</h2>
+          <p class="text-muted mb-0">
+           증거물로 습득한 아이패드의 비밀번호를 추론하여 아이패드를 확인해보세요.          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <form id="bookshelfGate" class="card shadow-sm border-0">
+            <div class="card-body">
+              <label for="secretCode" class="fw-bold mb-2">비밀번호 입력</label>
+              <div class="input-group">
+                <input
+                  type="password"
+                  inputmode="numeric"
+                  pattern="\d*"
+                  class="form-control"
+                  id="secretCode"
+                  placeholder="숫자 3자리를 입력하세요"
+                  maxlength="3"
+                  aria-describedby="codeHelp"
+                  required
+                >
+                <button class="btn btn-primary" type="submit">열기</button>
+              </div>
+              <small id="codeHelp" class="form-text text-muted mt-2">
+                힌트: 위의 증거들 속에 숨어 있어요.
+              </small>
+              <div id="codeFeedback" class="text-danger small mt-2 d-none">
+                비밀번호가 올바르지 않습니다.
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ 비밀번호 정답 시 뜨는 모달 -->
+  <div class="modal fade" id="secretRoomModal" tabindex="-1" aria-labelledby="secretRoomLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title" id="secretRoomLabel">아이패드 단서</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="닫기"></button>
+        </div>
+        <div class="modal-body text-center bg-light">
+          <img src="img/아이패드 사진.png" alt="아이패드 사진" class="img-fluid rounded shadow-sm">
+          <p class="text-muted small mt-2">아이패드 안의 내용입니다.</p>
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ✅ 비밀번호 검사 스크립트 -->
+  <script>
+    (function () {
+      const form = document.getElementById('bookshelfGate');
+      const input = document.getElementById('secretCode');
+      const feedback = document.getElementById('codeFeedback');
+      const SECRET = '211'; // ← 정답 비밀번호
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const val = (input.value || '').trim();
+
+        if (val === SECRET) {
+          feedback.classList.add('d-none');
+
+          // ✅ Bootstrap 5 모달 표시
+          const modalEl = document.getElementById('secretRoomModal');
+          const modal = new bootstrap.Modal(modalEl);
+          modal.show();
+
+          input.value = '';
+        } else {
+          feedback.classList.remove('d-none');
+          input.focus();
+          input.select();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Testimonial (제출 안내) -->
+<div class="container-fluid py-5 d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="section-title position-relative text-center mb-5">
+          증거 확보 내용을 <br>조사하여<br> 최종 범인을 찾아서 제출해주세요.
+          <br>
+          </span>
+        </h1>
+
+        <a href="https://forms.gle/JkfnCg8ARJc8yK3v5" target="_blank" rel="noopener" class="btn btn-primary px-4 py-2">
+          제출 페이지 열기
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
